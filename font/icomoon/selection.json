@@ -1,0 +1,78 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M747.52 307.251l-471.040-0.051 235.52 409.6z"
+				],
+				"tags": [
+					"arrow-down",
+					"triangle",
+					"down",
+					"bottom"
+				],
+				"defaultCode": 122,
+				"grid": 16
+			},
+			"properties": {
+				"order": 248,
+				"id": 6,
+				"prevSize": 32,
+				"code": 122,
+				"name": "arrow-down",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 7
+		},
+		{
+			"icon": {
+				"paths": [
+					"M307.251 276.48l-0.051 471.040 409.6-235.52z"
+				],
+				"tags": [
+					"arrow-right",
+					"triangle",
+					"right",
+					"next"
+				],
+				"defaultCode": 99,
+				"grid": 16
+			},
+			"properties": {
+				"order": 249,
+				"id": 8,
+				"prevSize": 32,
+				"code": 99,
+				"name": "arrow-right",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 9
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 512,
+				"baseline": 6.25,
+				"whitespace": 50
+			}
+		},
+		"imagePref": {},
+		"historySize": 100,
+		"showCodes": true,
+		"search": ""
+	}
+}

@@ -1,0 +1,24 @@
+
+/* = Example
+********************************************************************************/
+.example-container {
+    border:solid 1px #ccc;
+    padding:20px;
+    border-radius:5px 5px 0 0;
+    background:#F8F8F8;
+}
+/* = Code
+********************************************************************************/
+.code-container .snippet-container{
+    background:#e3f0fc;
+    border:solid 1px #ccc;
+    border-radius:0 0 5px 5px ;
+    position:relative;
+}
+.code-container ol {
+    padding:0px!important;
+}
+.snippet-menu {
+    position:absolute;
+    right:20px;
+}
