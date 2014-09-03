@@ -3,14 +3,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>AAM Software Style Guide</title>
     <link rel="stylesheet" href="css/importall.css">
+    <link rel="icon" href="img/icons/favicon.ico">
 	<script src="js/lib/jquery-2.1.1.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
     <script src="js/lib/handlebars-v1.3.0.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/global.js"></script>
-    <script src="js/lib/jquery.snippet.js"></script>
     <script src="js/lib/jquery-ui.min.js"></script>
+    <script src="js/lib/jquery.fastLiveFilter.js"></script>
+    <script src="js/lib/ZeroClipboard.js"></script>
+    <script src="js/lib/jquery.highlight.js"></script>
     <script>
 		$(function() {
 			$( "#accordion" ).accordion({
@@ -21,41 +24,54 @@
 </head>
 
 <body>
-    <header></header>
-    <nav id="accordion" class="main-nav">
-        <h1 class="no-subnav"><a id="introduction-nav" class="active">Introduction</a></h1>
-        <div></div>
-        <h1><a id="styles-nav">General styles</a></h1>
-        <div>
-            <ul>
-                <li><a>Font</a></li>
-                <li><a>Icons</a></li>
-                <li><a id="headings-nav">Headings</a></li>
-                <li><a>Aligment classes</a></li>
-                <li><a>Tables</a></li>
-                <li><a>Forms</a></li>
-                <li><a>Buttons</a></li>
-            </ul>
-        </div>
-        <h1><a id="widgets-nav">Widgets</a></h1>
-        <div>
-            <ul>
-                <li><a>Icons</a></li>
-                <li><a>Dropdown</a></li>
-                <li><a>Main nav</a></li>
-                <li><a>Sub nav</a></li>
-                <li><a>Breadcrumbs</a></li>
-                <li><a>Pagination</a></li>
-                <li><a>Alerts</a></li>
-                <li><a>Progress bar</a></li>
-            </ul>
-        </div>
-        <h1 class="no-subnav"><a id="dependencies-nav">Dependencies</a></h1>
-        <div></div>
-        <h1 class="no-subnav"><a id="dev-nav">Dev</a></h1>
-        <div></div>
+    <header>
+        <span class="icon-compass"></span>
+        <h1>AAM Software Style Guides</h1>
+    </header>
+    <nav>
+        <input id="search_input" placeholder="Filter nav" type="search">
+        <span class="icon-search"></span>
+        <div id="accordion" class="main-nav">
+            <h1 class="no-subnav"><a id="introduction-nav" class="active">Introduction</a></h1>
+            <div></div>
+            <h1><a id="styles-nav">General styles</a></h1>
+            <div>
+                <ul>
+                    <li><a>Font</a></li>
+                    <li><a>Icons</a></li>
+                    <li><a id="headings-nav">Headings</a></li>
+                    <li><a>Aligment classes</a></li>
+                    <li><a>Tables</a></li>
+                    <li><a>Forms</a></li>
+                    <li><a>Buttons</a></li>
+                    <li><a id="login-nav">Login</a></li>
+                </ul>
+            </div>
+            <h1><a id="widgets-nav">Widgets</a></h1>
+            <div>
+                <ul>
+                    <li><a>Icons</a></li>
+                    <li><a>Dropdown</a></li>
+                    <li><a>Main nav</a></li>
+                    <li><a>Sub nav</a></li>
+                    <li><a>Breadcrumbs</a></li>
+                    <li><a>Pagination</a></li>
+                    <li><a>Alerts</a></li>
+                    <li><a>Progress bar</a></li>
+                </ul>
+            </div>
+            <h1 class="no-subnav"><a id="dependencies-nav">Dependencies</a></h1>
+            <div></div>
+            <h1 class="no-subnav"><a id="dev-nav">Dev</a></h1>
+            <div></div>
+        </div>   
     </nav>
     
     <section class="main-content"></section>
+    <script>
+		$(function() {
+			$('#search_input').fastLiveFilter('#accordion, .main-nav li');
+		});
+    </script>
 </body>
 </html>

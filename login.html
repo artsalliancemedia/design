@@ -1,0 +1,157 @@
+<script>
+	$(document).ready(function(){
+	$('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol',attribute: 'data-language'});
+});
+</script>
+<h2>Login</h2>
+<h3>CSS</h3>
+<pre class="code" data-language="css">
+.login-container {
+    background: #64be79;
+}
+.login-content {
+    width: 250px;
+    color: #fff;
+    position: absolute;
+    left: calc(50% - 105px);
+    top: calc(50% - 160px);
+}
+.login-content img {
+    margin-bottom: 20px;
+}
+.login-content input {
+    background: #308443;
+    border-color: #137229;
+    color: #fff;
+    width: 172px;
+    border-radius: 0;
+    padding: 10px 28px 8px 8px;
+    margin-bottom: 15px;
+}
+.login-content input:focus {
+    border-color: #308443!important;
+    color: #fff;
+}
+/*Chrome/Firefox autofill fix*/
+.login-container input:-webkit-autofill {
+ -webkit-box-shadow: 0 0 0px 100px #308443 inset;
+ -webkit-text-fill-color: #fff;
+}
+.login-container input:-webkit-autofill:focus {
+ -webkit-box-shadow: 0 0 0px 100px #308443 inset;
+ -webkit-text-fill-color: #fff;
+}
+.login-container input::-webkit-input-placeholder {
+ color:#64be79;
+}
+.login-container input::-moz-placeholder {
+ color:#64be79;
+}
+.login-content span[class^="icon-"] {
+    color: #64be79;
+    position: relative;
+    top: 2px;
+    left: -28px;
+    font-size: 16px;
+}
+.login-button {
+    padding: 6px 10px;
+    border-radius: 3px;
+    background: #E8E8E8;
+    -webkit-box-shadow: 0px 2px 0px #B8B8B8;
+    -moz-box-shadow: 0px 2px 0px #B8B8B8;
+    box-shadow: 0px 2px 0px #B8B8B8;
+    border: none;
+    color: #585858;
+    cursor: pointer;
+}
+.login-button:hover {
+    background: #D8D8D8;
+}
+/*Error*/
+.login-error {
+   position:relative;
+   top:-10px; 
+   color:#A00000;
+   display:none;
+}
+/*Footer links*/
+.login-footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 130px;
+    border-top: 1px solid #147c2c;
+    background: #308443;
+    text-align: center;
+    color: #64be79;
+}
+.login-footer li {
+    display: inline-block;
+    padding: 25px;
+}
+.login-footer span {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+.login-footer span.icon-aam{
+    position:absolute;
+    bottom:0px;
+    right:10px;
+    font-size:16px;
+    color:#64be79;
+}
+</pre>
+<h3>HTML</h3>
+<pre class="code" data-language="html">
+<section class="login-content">
+    <img class="logo" src="static/img/login/adFuser-logo.png" alt="AdFuser Logo">
+    <form id="login_form" method="post">
+        <ul>
+            <li>
+                <input type="text" name="login_username" placeholder="Username">
+                <span class="icon-user"></span>
+                <span class="login-error">Error message</span>
+            </li>
+            <li>
+                <input type="password" name="login_password" placeholder="Password">
+                <span class="icon-password-lock"></span>
+                <span class="login-error">Error message</span>
+            </li>
+            <li>
+                <button type="submit" class="login-button" value="Login">Login</button>
+            </li>
+        </ul>
+    </form>
+    {%if login_failed%}
+        <span class="error">
+            Login failed!
+        </span>
+    {%endif%}
+    </section>
+    <section class="login-footer">
+    <ul>
+        <li>
+            <span class="icon-pdf"></span>
+            Download Manual
+        </li>
+        <li>
+            <span class="icon-new"></span>
+            New Features
+        </li>
+        <li>
+            <span class="icon-forum"></span>
+            Forum
+        </li>
+        <li>
+            <span class="icon-cog"></span>
+            Settings
+        </li>
+    </ul>
+    <a href="http://artsalliancemedia.com/" target="_blank">
+        <span class="icon-aam"></span>
+    </a>
+    </section>
+</pre>

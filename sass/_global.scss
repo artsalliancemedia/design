@@ -56,10 +56,10 @@
 @font-face {
 	font-family: 'icomoon';
 	src:url('../font/icomoon/icomoon.eot?deo2ta');
-	src:url('../font/icomoon/icomoon.eot?#iefixdeo2ta') format('embedded-opentype'),
+	src:url('../font/icomoon/icomoon.svg?deo2ta#icomoon') format('svg'),
+        url('../font/icomoon/icomoon.eot?#iefixdeo2ta') format('embedded-opentype'),
 		url('../font/icomoon/icomoon.woff?deo2ta') format('woff'),
-		url('../font/icomoon/icomoon.ttf?deo2ta') format('truetype'),
-		url('../font/icomoon/icomoon.svg?deo2ta#icomoon') format('svg');
+		url('../font/icomoon/icomoon.ttf?deo2ta') format('truetype'),;
 	font-weight: normal;
 	font-style: normal;
 }
@@ -84,7 +84,19 @@
 .icon-arrow-right:before {
 	content: "\63";
 }
-
+.icon-brush:before {
+	content: "\e031";
+}
+.icon-search:before {
+	content: "\e017";
+}
+.icon-compass:before {
+	content: "\e609";
+}
+ol li{
+    list-style:decimal;
+    
+}
 
 /* = Body
 ********************************************************************************/
@@ -94,11 +106,16 @@ body {
 }
 /* = H1
 ********************************************************************************/
-h1 {
+h1, h2 {
    font-size:1.5em;
    margin:0px; 
    line-height:1;
    font-weight:normal;
+}
+/* = Inputs
+********************************************************************************/
+input {
+    padding:4px;
 }
 /* = Header
 ********************************************************************************/
@@ -106,6 +123,24 @@ header {
    background:#444;
    height:44px; 
    border-bottom:solid 1px #282828;
+   color:#fff;
+   line-height:0px;
+}
+header span[class*="icon-"]{
+    display: inline-block;
+    background: #E2788C;
+    height: 44px;
+    width: 44px;
+    line-height:2em;
+    text-align: center;
+    font-size: 22px;
+}
+header h1 {
+    display:inline-block;
+    font-size:1em;
+    position:relative;
+    top:-4px;
+    left:5px;
 }
 /* = Main nav
 ********************************************************************************/
@@ -145,6 +180,17 @@ nav li {
 nav .active, nav a:hover {
     text-decoration:underline;
     cursor:pointer;
+}
+nav input[type="search"] {
+    border:solid 1px #282828;
+    background-color:#333;
+    border-radius:2px;
+    margin-bottom:15px;
+}
+nav .icon-search {
+    display:inline-block;
+    margin-left:-25px;
+    color:#888;
 }
 /* = Main content
 ********************************************************************************/

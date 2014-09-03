@@ -10,7 +10,8 @@ $(function(){
 			"widgets": "widgets",
 			"dependencies": "dependencies",
 			"dev": "dev",
-			"headings": "headings"
+			"headings": "headings",
+			"login": "login"
 		},
 
 		introduction: function() {
@@ -46,6 +47,11 @@ $(function(){
 			$.get('headings.html', function(data) {
 				$('.main-content').html(data)
 			})
+		},
+		login: function() {
+			$.get('login.html', function(data) {
+				$('.main-content').html(data)
+			})
 		}
 
 	});
@@ -62,7 +68,8 @@ $(function(){
 			'click .main-nav #widgets-nav': 'displayWidgets',
 			'click .main-nav #dependencies-nav': 'displayDependencies',
 			'click .main-nav #dev-nav': 'displayDev',
-			'click .main-nav #headings-nav': 'displayHeadings'
+			'click .main-nav #headings-nav': 'displayHeadings',
+			'click .main-nav #login-nav': 'displayLogins'
 		},
 
 		//called on instantiation
@@ -97,6 +104,10 @@ $(function(){
 		
 		displayHeadings: function(){
 			this.router.navigate("headings", true);
+		},
+		
+		displayLogins: function(){
+			this.router.navigate("login", true);
 		}
 
 	});

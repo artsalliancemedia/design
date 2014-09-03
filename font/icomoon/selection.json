@@ -24,7 +24,7 @@
 				"ligatures": ""
 			},
 			"setIdx": 0,
-			"iconIdx": 7
+			"iconIdx": 0
 		},
 		{
 			"icon": {
@@ -49,7 +49,76 @@
 				"ligatures": ""
 			},
 			"setIdx": 0,
-			"iconIdx": 9
+			"iconIdx": 1
+		},
+		{
+			"icon": {
+				"paths": [
+					"M1024 576v-384h-192v-64c0-35.2-28.8-64-64-64h-704c-35.2 0-64 28.8-64 64v192c0 35.2 28.8 64 64 64h704c35.2 0 64-28.8 64-64v-64h128v256h-576v128h-32c-17.674 0-32 14.326-32 32v320c0 17.674 14.326 32 32 32h128c17.674 0 32-14.326 32-32v-320c0-17.674-14.326-32-32-32h-32v-64h576zM768 192h-704v-64h704v64z"
+				],
+				"tags": [
+					"paint-format",
+					"format"
+				],
+				"defaultCode": 57393,
+				"grid": 16
+			},
+			"properties": {
+				"order": 244,
+				"id": 150,
+				"prevSize": 32,
+				"code": 57393,
+				"name": "paint-format",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 2
+		},
+		{
+			"icon": {
+				"paths": [
+					"M813.85 441.139c0 89.19-17.946 154.573-69.248 219.52l201.344 229.862-100.454 107.878-235.238-219.853c-55.194 31.104-109.85 43.904-177.715 43.904-210.611 0-381.338-170.701-381.338-381.312 0-210.586 170.726-381.312 381.338-381.312 210.56 0 381.312 170.726 381.312 381.312zM427.725 165.606c-151.987 0-275.2 123.213-275.2 275.174 0 151.962 123.213 275.174 275.2 275.174 151.962 0 275.174-123.213 275.174-275.174 0-151.962-123.187-275.174-275.174-275.174z"
+				],
+				"tags": [
+					"search"
+				],
+				"defaultCode": 57367,
+				"grid": 16
+			},
+			"properties": {
+				"order": 245,
+				"id": 125,
+				"prevSize": 32,
+				"code": 57367,
+				"name": "search",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 3
+		},
+		{
+			"icon": {
+				"paths": [
+					"M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 928c-229.75 0-416-186.25-416-416s186.25-416 416-416 416 186.25 416 416-186.25 416-416 416zM608 416l-288-160h-64v64l160 288 288 160h64v-64l-160-288zM512 576c-35.346 0-64-28.654-64-64s28.654-64 64-64c35.346 0 64 28.654 64 64 0 35.346-28.654 64-64 64z"
+				],
+				"tags": [
+					"compass",
+					"direction",
+					"map",
+					"locate"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"order": 5,
+				"id": 69,
+				"prevSize": 32,
+				"code": 58889,
+				"name": "compass",
+				"ligatures": ""
+			},
+			"setIdx": 1,
+			"iconIdx": 2
 		}
 	],
 	"height": 1024,
@@ -57,22 +126,38 @@
 		"name": "icomoon"
 	},
 	"preferences": {
-		"showGlyphs": true,
-		"showQuickUse": true,
 		"fontPref": {
 			"prefix": "icon-",
 			"metadata": {
 				"fontFamily": "icomoon"
 			},
+			"showGlyphs": true,
 			"metrics": {
 				"emSize": 512,
 				"baseline": 6.25,
 				"whitespace": 50
-			}
+			},
+			"resetPoint": 58880,
+			"showQuickUse": true,
+			"quickUsageToken": false,
+			"showMetrics": true,
+			"showMetadata": false
 		},
-		"imagePref": {},
+		"imagePref": {
+			"color": 0,
+			"height": 16,
+			"columns": 16,
+			"margin": 16,
+			"png": true,
+			"sprites": false
+		},
 		"historySize": 100,
 		"showCodes": true,
+		"gridSize": 16,
+		"showLiga": false,
+		"showGrid": true,
+		"showGlyphs": true,
+		"showQuickUse": true,
 		"search": ""
 	}
 }

@@ -1,2 +1,2 @@
-sass --sourcemap --watch sass:..\sass
+sass --sourcemap --watch sass:css
 
