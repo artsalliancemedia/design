@@ -63,8 +63,15 @@
   content: "\e017"; }
 
 .icon-compass:before {
+  content: "\e60a"; }
+
+.icon-zoomin:before {
   content: "\e609"; }
 
+/* = SASS Specific
+********************************************************************************/
+/* = Lists
+********************************************************************************/
 ol li {
   list-style: decimal; }
 
@@ -155,7 +162,9 @@ nav input[type="search"] {
   border: solid 1px #282828;
   background-color: #333;
   border-radius: 2px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  padding: 5px 30px 2px 5px;
+  width: 165px; }
 
 nav .icon-search {
   display: inline-block;
@@ -175,27 +184,38 @@ nav .icon-search {
   overflow-y: auto;
   color: #444; }
 
-/* = Example
+.main-content h2 {
+  margin-bottom: 15px; }
+
+/* = Screenshot
 ********************************************************************************/
-.example-container {
-  border: solid 1px #ccc;
-  padding: 20px;
-  border-radius: 5px 5px 0 0;
-  background: #F8F8F8; }
+.zoomin-container {
+  margin-bottom: 15px;
+  display: block; }
 
-/* = Code
-********************************************************************************/
-.code-container .snippet-container {
-  background: #e3f0fc;
-  border: solid 1px #ccc;
-  border-radius: 0 0 5px 5px;
-  position: relative; }
+.screenshot {
+  max-width: 400px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer; }
 
-.code-container ol {
-  padding: 0px !important; }
-
-.snippet-menu {
+.zoomin {
+  max-width: 90%;
   position: absolute;
-  right: 20px; }
+  z-index: 999;
+  cursor: zoom-in;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.icon-zoomin {
+  position: relative;
+  color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  margin: 5px 0 0 5px; }
+
+.caption {
+  font-size: 12px;
+  display: block; }
 
 /*# sourceMappingURL=all.css.map */

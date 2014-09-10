@@ -1,9 +1,17 @@
-<script>
-	$(document).ready(function(){
-	$('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol',attribute: 'data-language'});
-});
-</script>
 <h2>Login</h2>
+<p>Text</p>
+<div class="zoomin-container">
+    <span class="icon-zoomin"></span>
+    <img src="img/content/login-screenshot.png" class="screenshot" />
+    <span class="caption">AdFuser login page</span>
+</div>
+
+<div class="zoomin-container">
+    <span class="icon-zoomin"></span>
+    <img src="img/content/login-screenshot-courier.png" class="screenshot" />
+    <span class="caption">Courier login page without footer links</span>
+</div>
+
 <h3>CSS</h3>
 <pre class="code" data-language="css">
 .login-container {
@@ -34,18 +42,18 @@
 }
 /*Chrome/Firefox autofill fix*/
 .login-container input:-webkit-autofill {
- -webkit-box-shadow: 0 0 0px 100px #308443 inset;
- -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 100px #308443 inset;
+    -webkit-text-fill-color: #fff;
 }
 .login-container input:-webkit-autofill:focus {
- -webkit-box-shadow: 0 0 0px 100px #308443 inset;
- -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 100px #308443 inset;
+    -webkit-text-fill-color: #fff;
 }
 .login-container input::-webkit-input-placeholder {
- color:#64be79;
+    color:#64be79;
 }
 .login-container input::-moz-placeholder {
- color:#64be79;
+    color:#64be79;
 }
 .login-content span[class^="icon-"] {
     color: #64be79;
@@ -70,10 +78,10 @@
 }
 /*Error*/
 .login-error {
-   position:relative;
-   top:-10px; 
-   color:#A00000;
-   display:none;
+    position:relative;
+    top:-10px; 
+    color:#A00000;
+    display:none;
 }
 /*Footer links*/
 .login-footer {
@@ -125,13 +133,8 @@
             </li>
         </ul>
     </form>
-    {%if login_failed%}
-        <span class="error">
-            Login failed!
-        </span>
-    {%endif%}
-    </section>
-    <section class="login-footer">
+</section>
+<section class="login-footer">
     <ul>
         <li>
             <span class="icon-pdf"></span>
@@ -153,5 +156,6 @@
     <a href="http://artsalliancemedia.com/" target="_blank">
         <span class="icon-aam"></span>
     </a>
-    </section>
+</section>
 </pre>
+

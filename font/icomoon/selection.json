@@ -4,6 +4,29 @@
 		{
 			"icon": {
 				"paths": [
+					"M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384 0 212.078 171.922 384 384 384 95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256zM448 192h-128v128h-128v128h128v128h128v-128h128v-128h-128z"
+				],
+				"tags": [
+					"zoom in",
+					"enlarge",
+					"scale"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"id": 128,
+				"order": 36,
+				"prevSize": 32,
+				"code": 58889,
+				"name": "zoomin",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 28
+		},
+		{
+			"icon": {
+				"paths": [
 					"M747.52 307.251l-471.040-0.051 235.52 409.6z"
 				],
 				"tags": [
@@ -16,14 +39,14 @@
 				"grid": 16
 			},
 			"properties": {
-				"order": 248,
+				"order": 35,
 				"id": 6,
 				"prevSize": 32,
 				"code": 122,
 				"name": "arrow-down",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 0
 		},
 		{
@@ -41,14 +64,14 @@
 				"grid": 16
 			},
 			"properties": {
-				"order": 249,
+				"order": 34,
 				"id": 8,
 				"prevSize": 32,
 				"code": 99,
 				"name": "arrow-right",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 1
 		},
 		{
@@ -64,14 +87,14 @@
 				"grid": 16
 			},
 			"properties": {
-				"order": 244,
+				"order": 33,
 				"id": 150,
 				"prevSize": 32,
 				"code": 57393,
 				"name": "paint-format",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 2
 		},
 		{
@@ -86,14 +109,14 @@
 				"grid": 16
 			},
 			"properties": {
-				"order": 245,
+				"order": 32,
 				"id": 125,
 				"prevSize": 32,
 				"code": 57367,
 				"name": "search",
 				"ligatures": ""
 			},
-			"setIdx": 0,
+			"setIdx": 1,
 			"iconIdx": 3
 		},
 		{
@@ -110,14 +133,14 @@
 				"grid": 16
 			},
 			"properties": {
-				"order": 5,
+				"order": 31,
 				"id": 69,
 				"prevSize": 32,
-				"code": 58889,
+				"code": 58890,
 				"name": "compass",
 				"ligatures": ""
 			},
-			"setIdx": 1,
+			"setIdx": 2,
 			"iconIdx": 2
 		}
 	],

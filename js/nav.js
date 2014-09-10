@@ -1,4 +1,20 @@
 $(function(){
+	//adds color code to documents
+	function highlightCode() {
+		$('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol',attribute: 'data-language'});
+	}
+	
+	//adds color code to documents
+	function zoominScreenshot() {
+		$(".screenshot").on('click', function(){
+			$(".screenshot").addClass("zoomin");
+			$(this).parent().siblings().children().removeClass('zoomin');
+		});
+		
+		$(this).on('mouseleave', function(){
+			$(".screenshot").removeClass("zoomin").addClass(".zoomin-transition");
+		});
+	}
 
 	var ApplicationRouter = Backbone.Router.extend({
 
@@ -51,6 +67,8 @@ $(function(){
 		login: function() {
 			$.get('login.html', function(data) {
 				$('.main-content').html(data)
+				highlightCode();
+				zoominScreenshot();
 			})
 		}
 

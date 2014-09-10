@@ -91,13 +91,30 @@
 	content: "\e017";
 }
 .icon-compass:before {
+	content: "\e60a";
+}
+.icon-zoomin:before {
 	content: "\e609";
 }
-ol li{
-    list-style:decimal;
-    
+/* = SASS Specific
+********************************************************************************/
+$primary-blue:rgb(40, 128, 215);
+@mixin icon-only-btn {
+    border:none;
+    background:none;
+    font-size:16px; 
+    padding:0px;
+    margin:0px;
 }
-
+@mixin transition-1{
+    -webkit-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+}
+/* = Lists
+********************************************************************************/
+ol li{
+    list-style:decimal;    
+}
 /* = Body
 ********************************************************************************/
 body {
@@ -186,6 +203,8 @@ nav input[type="search"] {
     background-color:#333;
     border-radius:2px;
     margin-bottom:15px;
+    padding:5px 30px 2px 5px;
+    width:165px;
 }
 nav .icon-search {
     display:inline-block;
@@ -204,4 +223,7 @@ nav .icon-search {
     padding:20px;
     overflow-y:auto;
     color:#444;
+}
+.main-content h2 {
+    margin-bottom:15px;
 }
