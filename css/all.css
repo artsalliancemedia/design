@@ -187,6 +187,18 @@ nav .icon-search {
 .main-content h2 {
   margin-bottom: 15px; }
 
+.main-content p {
+  line-height: 1.6em; }
+
+.main-content a {
+  color: #2880d7;
+  text-decoration: none; }
+
+.content-list li {
+  display: block;
+  line-height: 1.6em;
+  margin-top: 15px; }
+
 /* = Screenshot
 ********************************************************************************/
 .zoomin-container {
@@ -217,5 +229,39 @@ nav .icon-search {
 .caption {
   font-size: 12px;
   display: block; }
+
+/* = Table
+********************************************************************************/
+th, td {
+  border-bottom: solid 1px #ccc;
+  padding: 6px;
+  text-align: left; }
+
+th {
+  border-right: 1px solid #ccc;
+  background: #e8e8e8; }
+
+/* = Datatable
+********************************************************************************/
+#data-table_filter .icon-search {
+  position: relative;
+  top: 2px;
+  left: -20px;
+  color: #ccc; }
+
+.dataTable {
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc; }
+
+.dt-footer {
+  border: solid 1px #ccc;
+  background: #f0f0f0; }
+
+/* = Inputs
+********************************************************************************/
+input[type="search"] {
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  background: #f8f8f8; }
 
 /*# sourceMappingURL=all.css.map */

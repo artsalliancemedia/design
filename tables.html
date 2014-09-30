@@ -1,0 +1,84 @@
+<h2>Tables</h2>
+<p>We have static and interactive tables. Check which version in software is used. You can add extentions to data tables Table are responsive with fixed header. Search should be outside table so we can add other filters next to it. Table too wide make them smaller. Search should be outside table</p>
+<h3>Getting Started</h3>
+<p>Include two files to site, the CSS styling and DataTable script.</p>
+<div class="table-filters"></div>
+<table id="data-table" class="display">
+    <thead>
+        <tr>
+            <th>CPL Title</th>
+            <th>Valid From</th>
+            <th>Valid To</th>
+            <th>Complex</th>
+            <th>Screen</th>
+            <th>Delivery Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>JAUJA-4-3_FTR_F-133_QSA-QSA_INT-TD_51_2K_XX_20140821_TDI_VF</td>
+            <td>2014-09-17 23:00:00</td>
+            <td>2014-09-28 07:00:00</td>
+            <td>IES Sade Antiguo Berri</td>
+            <td>7</td>
+            <td>Deleted on TMS</td>
+        </tr>
+        <tr>
+            <td>BELLE_FTR-1_S_ES-XX_ES_51_2K_FX_20140421_DSP_OV</td>
+            <td>2014-08-13 23:00:00</td>
+            <td>2014-11-06 06:59:00</td>
+            <td>IES Sade Principe</td>
+            <td>1</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>BARBECUE_FTR_F_ES-XX_ES_51_2K_ACON_20140611_YBA_OV</td>
+            <td>2014-07-20 01:00:01</td>
+            <td>2014-10-30 23:59:59</td>
+            <td>IES Sade Principe</td>
+            <td>1</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>AMOR-CRIMEN_FTR_S_ES-XX_51_2K_20140828_ADC_VF</td>
+            <td>014-09-02 14:48:36</td>
+            <td>2014-11-07 11:00:00</td>
+            <td>IES Sade Principe</td>
+            <td>1</td>
+            <td>Delivered</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<script>
+	$(document).ready(function(){
+		$('#data-table').DataTable({
+			sDom: "frt<'dt-footer'ip>",
+			pagingType: "simple",
+			bSort: true,
+			bSortClasses: true,
+			sScrollY: "auto",
+			sScrollX: "100%",
+			'oLanguage':{
+				'sInfoFiltered': 'No data available',
+				'sSearch': '',
+				'oPaginate': {
+					'sNext': '<span class="icon-compass" title="Next"></span>',
+					'sPrevious': '<span class="icon-compass" title="Previous"></span>'
+				}
+			
+			},
+			'aoColumns': [
+				{ "sClass": "eg-class" },
+				{ "sWidth": "160px" },
+				{ "sWidth": "160px" },
+				null,
+				null,
+				null
+			]
+		});
+		$('div.dataTables_filter').appendTo('.table-filters');//Places search filter outside table
+		$('.main-content input[type="search"]').after('<span class="icon-search"></span>');// Adds search icon to datatable search input
+	});
+</script>

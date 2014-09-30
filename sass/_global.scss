@@ -227,3 +227,15 @@ nav .icon-search {
 .main-content h2 {
     margin-bottom:15px;
 }
+.main-content p {
+    line-height:1.6em;
+}
+.main-content a {
+    color:$primary-blue;
+    text-decoration:none;
+}
+.content-list li{
+    display:block;
+    line-height:1.6em;
+    margin-top:15px;
+}

@@ -27,7 +27,8 @@ $(function(){
 			"dependencies": "dependencies",
 			"dev": "dev",
 			"headings": "headings",
-			"login": "login"
+			"login": "login",
+			"tables": "tables"
 		},
 
 		introduction: function() {
@@ -70,8 +71,13 @@ $(function(){
 				highlightCode();
 				zoominScreenshot();
 			})
+		},
+		tables: function() {
+			$.get('tables.html', function(data) {
+				$('.main-content').html(data)
+				highlightCode();
+			})
 		}
-
 	});
 
 	var ApplicationView = Backbone.View.extend({
@@ -87,7 +93,8 @@ $(function(){
 			'click .main-nav #dependencies-nav': 'displayDependencies',
 			'click .main-nav #dev-nav': 'displayDev',
 			'click .main-nav #headings-nav': 'displayHeadings',
-			'click .main-nav #login-nav': 'displayLogins'
+			'click .main-nav #login-nav': 'displayLogins',
+			'click .main-nav #tables-nav': 'displayTables'
 		},
 
 		//called on instantiation
@@ -126,6 +133,10 @@ $(function(){
 		
 		displayLogins: function(){
 			this.router.navigate("login", true);
+		},
+		
+		displayTables: function(){
+			this.router.navigate("tables", true);
 		}
 
 	});
