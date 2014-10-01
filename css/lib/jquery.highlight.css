@@ -51,7 +51,7 @@ div.highlight ul.tabs li.active:hover {
 div.highlight pre.code ol {
 	margin: 0;
 	padding:0 0 0 45px;
-	background:#E0E0E0; 
+	background:rgba(40, 128, 215, 0.1); 
 }
 div.highlight pre.code ul {
 	margin: 0;

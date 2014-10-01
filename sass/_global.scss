@@ -81,6 +81,9 @@
 .icon-arrow-down:before {
 	content: "\7a";
 }
+.icon-arrow-up:before {
+	content: "\78";
+}
 .icon-arrow-right:before {
 	content: "\63";
 }
@@ -95,6 +98,12 @@
 }
 .icon-zoomin:before {
 	content: "\e609";
+}
+.icon-prev:before {
+	content: "\e604";
+}
+.icon-next:before {
+	content: "\e605";
 }
 /* = SASS Specific
 ********************************************************************************/
@@ -123,11 +132,19 @@ body {
 }
 /* = H1
 ********************************************************************************/
-h1, h2 {
+h1, h2{
    font-size:1.5em;
    margin:0px; 
    line-height:1;
    font-weight:normal;
+}
+h3 {
+   font-size:18px; 
+   font-weight:normal;
+}
+h4 {
+   font-size:14px; 
+   font-weight:bold;
 }
 /* = Inputs
 ********************************************************************************/
@@ -233,6 +250,9 @@ nav .icon-search {
 .main-content a {
     color:$primary-blue;
     text-decoration:none;
+}
+.main-content a:hover {
+    text-decoration:underline;
 }
 .content-list li{
     display:block;

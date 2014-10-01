@@ -39,21 +39,74 @@ th {
     border-right:1px solid #ccc;
     background:#e8e8e8;
 }
-/* = Datatable
+th:last-child {
+    border-right:none;
+}
+tr:hover {
+    background:#FCF;
+}
+/* = Static table
 ********************************************************************************/
+.table-1 {
+    border:solid 1px #ccc;
+    width:100%;
+    font-size:13px;
+}
+/* = DataTable
+********************************************************************************/
+#data-table_filter {
+    margin-bottom:15px;
+}
 #data-table_filter .icon-search {
     position:relative;
     top:2px;
     left:-20px;
     color:#ccc;
 }
-.dataTable {
-    border-left:solid 1px #ccc;
-    border-right:solid 1px #ccc;
+.dataTables_scroll {
+    border:solid 1px #ccc;
+    border-bottom:none;
+    font-size:13px;
 }
+/*SORTING*/
+th.sorting_asc, th.sorting_desc, th.sorting {
+    padding-right:23px;
+    cursor:pointer;
+}
+th.sorting_asc span:before, th.sorting_desc span:before, th.sorting:hover span:before{
+    content: "\78";
+    font-family: 'icomoon';
+    font-size:16px;
+    color:$primary-blue;
+    float:right;
+    margin-right:-20px;
+    height:0; /*Lame fix for extra padding added to TH which makes title jump */
+}
+th.sorting_desc span:before {
+    content: "\7a";
+}
+th.sorting:hover span:before {
+    color:#A8A8A8;
+}
+/*FOOTER*/
 .dt-footer {
     border:solid 1px #ccc;
+    border-top:none;
     background:#f0f0f0;
+    padding:6px;
+    font-size:13px;
+    position:relative;
+    color:#A8A8A8;
+}
+.dt-footer .dataTables_paginate {
+    position:absolute;
+    right:6px;
+    top:6px;
+    font-size:16px;
+}
+.dataTables_paginate a.disabled{
+    color:#B8B8B8;
+    cursor:default;
 }
 /* = Inputs
 ********************************************************************************/

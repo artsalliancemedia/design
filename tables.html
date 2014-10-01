@@ -1,9 +1,72 @@
 <h2>Tables</h2>
-<p>We have static and interactive tables. Check which version in software is used. You can add extentions to data tables Table are responsive with fixed header. Search should be outside table so we can add other filters next to it. Table too wide make them smaller. Search should be outside table</p>
-<h3>Getting Started</h3>
-<p>Include two files to site, the CSS styling and DataTable script.</p>
+<p>Two type of tables are commonly used, static and interactive. For interactive tables we use jQuery plug-in <a href="http://www.datatables.net/" target="_blank">DataTables</a>. All tables have fluid layout. If there is not many column and table is previewed on largr screen table width shouldnt be 100% in order to make more user friendly</p>
+<h3>Static Table</h3>
+<p>Static table should have correct mark up.</p>
+<table class="table-1">
+    <tr>
+        <th>Name</th>
+        <th>Matched Cpls</th>
+        <th>Year</th>
+        <th>Last Modified</th>
+    </tr>
+    <tr>
+        <td>Across The Universe</td>
+        <td>1</td>
+        <td>2014</td>
+        <td>2013-11-04 13:21:31</td>
+    </tr>
+    <tr>
+        <td>A Curious Life</td>
+        <td>1</td>
+        <td>2013</td>
+        <td>2014-02-03 04:00:05</td>
+    </tr>
+    <tr>
+        <td>Adaptation</td>
+        <td>2</td>
+        <td>2014</td>
+        <td>2013-11-04 13:21:23</td>
+    </tr>
+    <tr>
+        <td>Admission</td>
+        <td>3</td>
+        <td>2014</td>
+        <td>2013-11-04 13:21:49</td>
+    </tr>
+    <tr>
+        <td>Adrift</td>
+        <td>2</td>
+        <td>2013</td>
+        <td>2014-02-03 04:00:05</td>
+    </tr>
+    <tr>
+        <td>Adventure in Greece</td>
+        <td>1</td>
+        <td>2014</td>
+        <td>2013-11-04 13:21:31</td>
+    </tr>
+</table>
+<h4>HTML</h4>
+<pre class="code" data-language="html">
+<table class="table-1">
+    <tr>
+        <th>Name</th>
+        <th>Matched Cpls</th>
+        <th>Year</th>
+        <th>Last Modified</th>
+    </tr>
+    <tr>
+        <td>Across The Universe</td>
+        <td>1</td>
+        <td>2014</td>
+        <td>2013-11-04 13:21:31</td>
+    </tr>
+</table>
+</pre>
+<h3>Interactive table / DataTable</h3>
+<p>Interactive tables have fluid layout with fixed headers. Search should be placed outside tables in case we need to add other filters. Set up information can be find <a href="http://www.datatables.net/manual/installation" target="_blank">here</a>. Do not add CSS file as we have our costum styling.</p>
 <div class="table-filters"></div>
-<table id="data-table" class="display">
+<table id="data-table" class="display sort-table">
     <thead>
         <tr>
             <th>CPL Title</th>
@@ -49,7 +112,120 @@
         </tr>
     </tbody>
 </table>
-
+<h4>HTML</h4>
+<pre class="code" data-language="html">
+<div class="table-filters"></div>
+<table id="data-table" class="display">
+    <thead>
+        <tr>
+            <th>CPL Title</th>
+            <th>Valid From</th>
+            <th>Valid To</th>
+            <th>Complex</th>
+            <th>Screen</th>
+            <th>Delivery Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>AMOR-CRIMEN_FTR_S_ES-XX_51_2K_20140828_ADC_VF</td>
+            <td>014-09-02 14:48:36</td>
+            <td>2014-11-07 11:00:00</td>
+            <td>IES Sade Principe</td>
+            <td>1</td>
+            <td>Delivered</td>
+        </tr>
+    </tbody>
+</table>
+</pre>
+<h4>CSS</h4>
+<pre class="code" data-language="css">
+#data-table_filter {
+    margin-bottom:15px;
+}
+#data-table_filter .icon-search {
+    position:relative;
+    top:2px;
+    left:-20px;
+    color:#ccc;
+}
+.dataTables_scroll {
+    border:solid 1px #ccc;
+    border-bottom:none;
+}
+/*SORTING*/
+th.sorting_asc, th.sorting_desc, th.sorting {
+    padding-right:23px;
+    cursor:pointer;
+}
+th.sorting_asc span:before, th.sorting_desc span:before, th.sorting:hover span:before{
+    content: "\78";
+    font-family: 'icomoon';
+    font-size:16px;
+    color:$primary-blue;
+    float:right;
+    margin-right:-20px;
+    height:0;
+}
+th.sorting_desc span:before {
+    content: "\7a";
+}
+th.sorting:hover span:before {
+    color:#A8A8A8;
+}
+/*FOOTER*/
+.dt-footer {
+    border:solid 1px #ccc;
+    border-top:none;
+    background:#f0f0f0;
+    padding:6px;
+    font-size:13px;
+    position:relative;
+    color:#A8A8A8;
+}
+.dt-footer .dataTables_paginate {
+    position:absolute;
+    right:6px;
+    top:6px;
+    font-size:16px;
+}
+.dataTables_paginate a.disabled{
+    color:#B8B8B8;
+    cursor:default;
+}
+</pre>
+<h4>Java Script</h4>
+<pre class="code" data-language="js">
+	$(document).ready(function(){
+		$('#data-table').DataTable({
+			sDom: "frt<'dt-footer'ip>",
+			pagingType: "simple",
+			bSort: true,
+			bSortClasses: true,
+			sScrollY: "auto",
+			sScrollX: "100%",
+			'oLanguage':{
+				'sSearch': '',
+				'oPaginate': {
+					'sNext': '<span class="icon-next" title="Next"></span>',
+					'sPrevious': '<span class="icon-prev" title="Previous"></span>'
+				}
+			
+			},
+			'aoColumns': [
+				{ "sClass": "cpl-title" },
+				{ "sWidth": "160px" },
+				{ "sWidth": "160px" },
+				null,
+				null,
+				null
+			]
+		});
+		$('div.dataTables_filter').appendTo('.table-filters'); //Places search filter outside table
+		$('.main-content input[type="search"]').after('<span class="icon-search"></span>'); // Adds search icon to datatable search input
+		$('.sort-table.dataTable th').append('<span></span>'); //Adds span for arrow down for sorting table
+	});
+</pre>
 
 <script>
 	$(document).ready(function(){
@@ -61,16 +237,15 @@
 			sScrollY: "auto",
 			sScrollX: "100%",
 			'oLanguage':{
-				'sInfoFiltered': 'No data available',
 				'sSearch': '',
 				'oPaginate': {
-					'sNext': '<span class="icon-compass" title="Next"></span>',
-					'sPrevious': '<span class="icon-compass" title="Previous"></span>'
+					'sNext': '<span class="icon-next" title="Next"></span>',
+					'sPrevious': '<span class="icon-prev" title="Previous"></span>'
 				}
 			
 			},
 			'aoColumns': [
-				{ "sClass": "eg-class" },
+				{ "sClass": "cpl-title" },
 				{ "sWidth": "160px" },
 				{ "sWidth": "160px" },
 				null,
@@ -78,7 +253,8 @@
 				null
 			]
 		});
-		$('div.dataTables_filter').appendTo('.table-filters');//Places search filter outside table
-		$('.main-content input[type="search"]').after('<span class="icon-search"></span>');// Adds search icon to datatable search input
+		$('div.dataTables_filter').appendTo('.table-filters'); //Places search filter outside table
+		$('.main-content input[type="search"]').after('<span class="icon-search"></span>'); // Adds search icon to datatable search input
+		$('.sort-table.dataTable th').append('<span></span>'); //Adds span for arrow down for sorting table
 	});
 </script>
